@@ -34,28 +34,25 @@ class __TwigTemplate_bc1e3f17eb981984ee9cf937f4e3327c3020a905081acd52746b5cd6e86
     {
         $macros = $this->macros;
         // line 11
-        echo "<div class=\"ec-headerNaviRole\">
-    <div class=\"ec-headerNaviRole__left\">
-        ";
-        // line 13
-        echo twig_include($this->env, $context, "Block/logo.twig");
-        echo "
-    </div>
-    <div class=\"ec-headerNaviRole__right\">
-        <div class=\"ec-headerNaviRole__nav\">
-            ";
-        // line 17
-        echo twig_include($this->env, $context, "Block/login.twig");
-        echo "
-        </div>
-        <div class=\"ec-headerRole__cart\">
-            ";
-        // line 20
-        echo twig_include($this->env, $context, "Block/cart.twig");
-        echo "
-        </div>
-    </div>
-</div>";
+        echo "<header id=\"masthead\" class=\"site-header\" role=\"banner\">
+    <div class=\"inner cf\">
+        <p class=\"site-description\">くじデモページです</p>
+        <h1 class=\"site-title\"><a href=\"https://develop-test.xsrv.jp/sample_kuji_demo/\" title=\"くじデモ\" rel=\"home\">くじデモ</a></h1>
+        <div class=\"snav cf\">
+            <div class=\"membership\">
+                <i class=\"fa fa-user\"></i>
+                <ul class=\"cf\">
+                    <li>ゲスト</li>
+                    <li><a href=\"https://develop-test.xsrv.jp/sample_kuji_demo/usces-member/?usces_page=login\" class=\"usces_login_a\">ログイン</a></li>
+                    <li><a href=\"https://develop-test.xsrv.jp/sample_kuji_demo/usces-member/?usces_page=newmember\">新規会員登録</a></li>
+                </ul>
+            </div>
+            <div class=\"incart-btn\">
+                <a href=\"https://develop-test.xsrv.jp/sample_kuji_demo/usces-cart/\"><i class=\"fa fa-shopping-cart\"><span>カートの中</span></i><span class=\"total-quant\">1</span></a>
+            </div>
+        </div><!-- .snav -->  
+    </div><!-- .inner -->
+</header><!-- #masthead -->";
     }
 
     public function getTemplateName()
@@ -63,14 +60,9 @@ class __TwigTemplate_bc1e3f17eb981984ee9cf937f4e3327c3020a905081acd52746b5cd6e86
         return "Block/header.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  54 => 20,  48 => 17,  41 => 13,  37 => 11,);
+        return array (  37 => 11,);
     }
 
     public function getSourceContext()

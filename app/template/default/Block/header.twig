@@ -8,16 +8,22 @@ http://www.ec-cube.co.jp/
 For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 #}
-<div class="ec-headerNaviRole">
-    <div class="ec-headerNaviRole__left">
-        {{ include('Block/logo.twig') }}
-    </div>
-    <div class="ec-headerNaviRole__right">
-        <div class="ec-headerNaviRole__nav">
-            {{ include('Block/login.twig') }}
-        </div>
-        <div class="ec-headerRole__cart">
-            {{ include('Block/cart.twig') }}
-        </div>
-    </div>
-</div>
+<header id="masthead" class="site-header" role="banner">
+    <div class="inner cf">
+        <p class="site-description">くじデモページです</p>
+        <h1 class="site-title"><a href="https://develop-test.xsrv.jp/sample_kuji_demo/" title="くじデモ" rel="home">くじデモ</a></h1>
+        <div class="snav cf">
+            <div class="membership">
+                <i class="fa fa-user"></i>
+                <ul class="cf">
+                    <li>ゲスト</li>
+                    <li><a href="https://develop-test.xsrv.jp/sample_kuji_demo/usces-member/?usces_page=login" class="usces_login_a">ログイン</a></li>
+                    <li><a href="https://develop-test.xsrv.jp/sample_kuji_demo/usces-member/?usces_page=newmember">新規会員登録</a></li>
+                </ul>
+            </div>
+            <div class="incart-btn">
+                <a href="https://develop-test.xsrv.jp/sample_kuji_demo/usces-cart/"><i class="fa fa-shopping-cart"><span>カートの中</span></i><span class="total-quant">1</span></a>
+            </div>
+        </div><!-- .snav -->  
+    </div><!-- .inner -->
+</header><!-- #masthead -->
