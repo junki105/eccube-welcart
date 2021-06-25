@@ -9,48 +9,37 @@ For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 #}
 
-<div class="ec-headerNav">
     {% if is_granted('ROLE_USER') %}
-        <div class="ec-headerNav__item">
-            <a href="{{ url('mypage') }}">
-                <i class="ec-headerNav__itemIcon fas fa-user fa-fw"></i>
-                <span class="ec-headerNav__itemLink">{{ 'マイページ'|trans }}</span>
-            </a>
-        </div>
-        {% if BaseInfo.option_favorite_product %}
-            <div class="ec-headerNav__item">
-                <a href="{{ url('mypage_favorite') }}">
-                    <i class="ec-headerNav__itemIcon fas fa-heart fa-fw"></i>
-                    <span class="ec-headerNav__itemLink">{{ 'お気に入り'|trans }}</span>
-                </a>
-            </div>
-        {% endif %}
-        <div class="ec-headerNav__item">
+        <li>
+            <i class="ec-headerNav__itemIcon fas fa-user fa-fw"></i>
+            <span class="ec-headerNav__itemLink">Hello </span>
+        </li>
+        <li>
             <a href="{{ url('logout') }}">
                 <i class="ec-headerNav__itemIcon fas fa-lock fa-fw"></i>
                 <span class="ec-headerNav__itemLink">{{ 'ログアウト'|trans }}</span>
             </a>
-        </div>
+        </li>
+        <li>
+            <a href="{{ url('mypage') }}">
+                <i class="ec-headerNav__itemIcon fas fa-user fa-fw"></i>
+                <span class="ec-headerNav__itemLink">{{ 'マイページ'|trans }}</span>
+            </a>
+        </li>
     {% else %}
-        {% if BaseInfo.option_favorite_product %}
-            <div class="ec-headerNav__item">
-                <a href="{{ url('mypage_favorite') }}">
-                    <i class="ec-headerNav__itemIcon fas fa-heart fa-fw"></i>
-                    <span class="ec-headerNav__itemLink">{{ 'お気に入り'|trans }}</span>
-                </a>
-            </div>
-        {% endif %}
-        <div class="ec-headerNav__item">
+        <li>
+            <span class="ec-headerNav__itemLink">{{ 'ゲスト'|trans }}</span>
+        </li>
+        <li>
             <a href="{{ url('mypage_login') }}">
                 <i class="ec-headerNav__itemIcon fas fa-lock fa-fw"></i>
                 <span class="ec-headerNav__itemLink">{{ 'ログイン'|trans }}</span>
             </a>
-        </div>
-        <div class="ec-headerNav__item">
+        </li>
+        <li>
             <a href="{{ url('entry') }}">
                 <i class="ec-headerNav__itemIcon fas fa-user fa-fw"></i>
                 <span class="ec-headerNav__itemLink">{{ '新規会員登録'|trans }}</span>
             </a>
-        </div>
+        </li>
     {% endif %}
-</div>
